@@ -22,11 +22,22 @@ print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is R
 
 #My Pro Owner: @Demon_lord_adi(telegram User)
 
+def get_command(comm: Union[list, str]):
+  res = list()
+  if isinstance(comm, str):
+    res.extend([comm, f"{comm}@TimiCuteBot"])
+  if isinstance(comm, list):
+    for com in comm:
+      res.extend([com, f"{com}@TimiCuteBot"])
+  return filters.command(res, prefixes=["t", "T"])
 
 @bot.on_message(filters.command('start') & filters.group)
 async def timistart(_,message):
     await message.reply_text('Heyy, Watashi Wa Timi Is up')
 
+@bot.on_message(get_command('imi') & filters.group)
+async def timistart(_,message):
+    await message.reply_text('Yes Sir')
 
 bot.start()
 
