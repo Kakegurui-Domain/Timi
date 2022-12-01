@@ -6,12 +6,7 @@ from pyrogram import *
 import os
 import time
 
-bot = Client(
-    'Timi'
-    api_id=API_ID,
-    api_hash=API_HASH,
-    token=BOT_TOKEN
-)
+bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 """
 API_ID = os.environ.get("API_ID", None)
