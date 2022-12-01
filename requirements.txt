@@ -1,0 +1,6 @@
+aiohttp
+asyncio
+motor
+pyrogram 
+requests
+tgcrypto
