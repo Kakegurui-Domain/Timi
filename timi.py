@@ -6,7 +6,6 @@ from pyrogram import *
 import os
 import time
 
-bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 """
 API_ID = os.environ.get("API_ID", None)
@@ -16,6 +15,8 @@ TOKEN = os.environ.get("BOT_TOKEN", None)
 API_ID = "14676558"
 API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
+
+bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
 
