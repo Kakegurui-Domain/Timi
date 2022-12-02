@@ -6,9 +6,9 @@ from pyrogram import *
 import os
 import time
 from typing import Union
-from nekosbest import *
+from nekosbest import Client as timi, Result
 
-Timi = Client()
+Timi = timi()
 
 """
 API_ID = os.environ.get("API_ID", None)
