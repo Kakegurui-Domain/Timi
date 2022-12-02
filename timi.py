@@ -7,6 +7,8 @@ import os
 import time
 from typing import Union
 from nekosbest import Client as timi, Result
+import asyncio 
+
 
 Timi = timi()
 
@@ -41,6 +43,11 @@ async def timistart(_,message):
 @bot.on_message(get_command('imi') & filters.group)
 async def timistart(_,message):
     await message.reply_text('Yes, Heyy! Timi is watching you *cuddles*')
+
+@bot.on_message(filters.command('alive') & filters.group)
+async def get_img(_,message, type: str, amount: int = 1) -> Union[Result, list[Result]]:
+    result = await message.get_image(type, amount)
+    await message.reply_photo(result)
 
 bot.start()
 
