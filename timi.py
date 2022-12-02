@@ -45,7 +45,7 @@ async def timistart(_,message):
     await message.reply_text('Yes, Heyy! Timi is watching you *cuddles*')
 
 @bot.on_message(filters.command('alive') & filters.group)
-async def get_img(_,message, type: str, amount: int = 1) -> Union[Result, list[Result]]:
+async def get_img(_,message) -> Union[Result, list[Result]]:
     result = await message.get_image(type, amount)
     await message.reply_photo(result)
 
