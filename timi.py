@@ -74,8 +74,8 @@ async def timistart(_,message):
 async def timistart(_,message):
   await client.pin_chat_message(
     chat_id=message.chat.id,
-    message_id=message_id
-)
+    message_id=message_id)
+  await message.reply_text("sucessfully pinned")
   
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
