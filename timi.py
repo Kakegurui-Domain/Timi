@@ -5,7 +5,7 @@
 from pyrogram import *
 import os
 import time
-
+from typing import Union
 
 """
 API_ID = os.environ.get("API_ID", None)
