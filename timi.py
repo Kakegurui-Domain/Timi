@@ -72,7 +72,7 @@ async def get_img(_,message):
 
 @bot.on_message(filters.command('hug') & filters.group)
 async def timistart(_,message):
-    await message.reply_text('[username] hugs [username]')
+    await message.reply_text('hugs you')
 
 
 bot.start()
