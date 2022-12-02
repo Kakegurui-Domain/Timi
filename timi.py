@@ -82,3 +82,8 @@ print("Heyy I am up!!")
 print("Timi Version = v1.0.0")
 idle()
 
+@bot.on_message(filters.command('mute') & filters.group)
+async def timistart(_,message): 
+  await app.restrict_chat_member(chat_id, user_id, ChatPermissions())
+  await message.reply_text("sucessfully muted")
+  
