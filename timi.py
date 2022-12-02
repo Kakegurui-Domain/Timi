@@ -56,7 +56,7 @@ async def timistart(_,message):
     
 @bot.on_message(filters.command('ban') & filters.group)
 async def timistart(_,message):
-   await app.ban_chat_member('chat_id', 'user_id')
+   await bot.ban_chat_member('chat_id', 'user_id')
 
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
