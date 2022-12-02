@@ -6,7 +6,7 @@ from pyrogram import *
 import os
 import time
 from typing import Union
-from NekosBest import *
+from nekosbest import *
 
 Timi = Client()
 
