@@ -8,7 +8,7 @@ import time
 from typing import Union
 from nekosbest import Client as timi, Result
 import asyncio 
-Import requests
+import requests 
 
 Timi = timi()
 
