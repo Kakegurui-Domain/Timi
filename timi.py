@@ -51,34 +51,6 @@ async def timistart(_,message):
 async def timistart(_,message):
     await message.reply_text('bashes him with a bat!')
     
-@bot.on_message(filters.command('hug') & filters.group)
-async def timistart(_,message):
-    await message.reply_text('hugs you!!')
-    
-@bot.on_message(filters.command('ban') & filters.group)
-async def timistart(_,message):
-    await client.ban_chat_member(
-    chat_id=chat_id,
-    user_id=user_id
-)
-    await message.reply_text(f"Banned")
-    
-@bot.on_message(filters.command('unban') & filters.group)
-async def timistart(_,message):
-    await bot.unban_chat_member(chat, user)
-    await message.reply_text("unabanned")
-
-@bot.on_message(filters.command('mute') & filters.group)
-async def timistart(_,message): 
-  await app.restrict_chat_member(chat_id, user_id, ChatPermissions())
-  await message.reply_text("sucessfully muted")
-  
-  @bot.on_message(filters.command('pin') & filters.group)
-async def timistart(_,message):
-  await client.pin_chat_message(
-    chat_id=message.chat.id,
-    message_id=message_id)
-  await message.reply_text("sucessfully pinned")
   
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
