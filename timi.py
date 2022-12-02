@@ -51,7 +51,7 @@ async def timistart(_,message):
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
     result = Timi.get_image("neko")
-    await message.reply_photo(result)
+    await message.reply_animation(result)
 
 bot.start()
 
