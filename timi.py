@@ -50,10 +50,6 @@ async def timistart(_,message):
 async def timistart(_,message):
     await message.reply_text('bashes him with a bat!')
     
-@bot.on_message(filters.command('slap') & filters.group)
-async def timistart(_,message):
-    await message.reply_text('bashes him with a bat!')
-    
 @bot.on_message(filters.command('ban') & filters.group)
 async def timistart(_,message):
    await bot.ban_chat_member('bye lol')
