@@ -22,9 +22,9 @@ API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
-chat = update.effective_chat
-user = update.effective_user
-message = update.effective_message
+chat = 'update.effective_chat'
+user = 'update.effective_user'
+message = 'update.effective_message'
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
 
@@ -81,9 +81,4 @@ bot.start()
 print("Heyy I am up!!")
 print("Timi Version = v1.0.0")
 idle()
-
-@bot.on_message(filters.command('mute') & filters.group)
-async def timistart(_,message): 
-  await app.restrict_chat_member(chat_id, user_id, ChatPermissions())
-  await message.reply_text("sucessfully muted")
   
