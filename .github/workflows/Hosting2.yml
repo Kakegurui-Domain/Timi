@@ -36,4 +36,5 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        timi.py
+        pip3 install -U -r requirements.txt
+        python3 -m timi.py
