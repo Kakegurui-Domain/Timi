@@ -70,6 +70,11 @@ async def get_img(_,message):
     result = Timi.get_random_image()
     await message.reply_photo(result)
 
+@bot.on_message(filters.command('hug') & filters.group)
+async def timistart(_,message):
+    await message.reply_text('[username] hugs [username]')
+
+
 bot.start()
 
 print("Heyy I am up!!")
