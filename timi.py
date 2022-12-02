@@ -70,6 +70,13 @@ async def timistart(_,message):
   await app.restrict_chat_member(chat_id, user_id, ChatPermissions())
   await message.reply_text("sucessfully muted")
   
+  @bot.on_message(filters.command('pin') & filters.group)
+async def timistart(_,message):
+  await client.pin_chat_message(
+    chat_id=message.chat.id,
+    message_id=message_id
+)
+  
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
     result = Timi.get_random_image()
