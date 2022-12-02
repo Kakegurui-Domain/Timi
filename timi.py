@@ -22,6 +22,8 @@ API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+chat_id = -1001829138937
+user_id = 1967847517
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
 
@@ -46,12 +48,20 @@ async def timistart(_,message):
     
 @bot.on_message(filters.command('slap') & filters.group)
 async def timistart(_,message):
-    await message.reply_text(' bashes him with a bat!')
+    await message.reply_text('bashes him with a bat!')
+    
+@bot.on_message(filters.command('slap') & filters.group)
+async def timistart(_,message):
+    await message.reply_text('bashes him with a bat!')
+    
+@bot.on_message(filters.command('ban') & filters.group)
+async def timistart(_,message):
+   await app.ban_chat_member(chat_id, user_id)
 
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
-    result = Timi.get_image("neko")
-    await message.reply_animation(result)
+    result = Timi.get_random_image()
+    await message.reply_photo(result)
 
 bot.start()
 
