@@ -37,7 +37,7 @@ async def timistart(_,message):
 
 @bot.on_message(get_command('imi') & filters.group)
 async def timistart(_,message):
-    await message.reply_text('Yes Sir')
+    await message.reply_text('Yes, Heyy! Timi is watching you *cuddles*')
 
 bot.start()
 
