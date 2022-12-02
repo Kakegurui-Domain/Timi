@@ -60,6 +60,11 @@ async def timistart(_,message):
     await bot.unban_chat_member(chat_id, user_id)
     await message.reply_text("unabanned")
 
+@bot.on_message(filters.command('mute') & filters.group)
+async def timistart(_,message): 
+  await app.restrict_chat_member(chat_id, user_id, ChatPermissions())
+  await message.reply_text("sucessfully muted")
+  
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
     result = Timi.get_random_image()
