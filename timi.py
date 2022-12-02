@@ -49,6 +49,10 @@ async def timistart(_,message):
 @bot.on_message(filters.command('slap') & filters.group)
 async def timistart(_,message):
     await message.reply_text('bashes him with a bat!')
+
+@bot.on_message(filters.command('hug') & filters.group)
+async def timistart(_,message):
+    await message.reply_text('hugs you')
     
 @bot.on_message(filters.command('ban') & filters.group)
 async def timistart(_,message):
@@ -69,10 +73,6 @@ async def timistart(_,message):
 async def get_img(_,message):
     result = Timi.get_random_image()
     await message.reply_photo(result)
-
-@bot.on_message(filters.command('hug') & filters.group)
-async def timistart(_,message):
-    await message.reply_text('hugs you')
 
 
 bot.start()
