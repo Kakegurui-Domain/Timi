@@ -23,6 +23,8 @@ BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
+TIMI = """Timi is Up....!\n • Timi version: ```v1.0.0```"""
+
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
 
 #My Pro Owner: @Demon_lord_adi(telegram User)
@@ -48,11 +50,11 @@ async def timistart(_,message):
     
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
-    work = message.reply_to_message.reply_photo if message.reply_to_message else message.reply_animation
+    work = message.reply_to_message.reply_photo if message.reply_to_message else message.reply_photo
     Ttimi = requests.get("https://nekos.best/api/v2/neko")
     data = Ttimi.json()
     img = (data["results"][0]["url"])
-    await work(img)
+    await work(img, TIMI)
 
 
 bot.start()
