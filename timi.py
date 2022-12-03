@@ -26,6 +26,26 @@ BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 TIMI = """Timi is Up....!\n • Timi version: `v1.0.0`\n • Timi Uptime: """
+TIMI_MSG = """Watashi Wa Timi is up!"""
+
+Buttons = [
+        [
+            InlineKeyboardButton(
+                "🆘", url="https://t.me/Sebastiansupport"
+            ),
+        ]
+    ]
+
+buttons = [
+        [
+            InlineKeyboardButton(
+                "🆘", url="https://t.me/Sebastian_support"
+            ),
+            InlineKeyboardButton(
+                "⚙️", url="https://t.me/Sebastian_update"
+            ),
+        ]
+    ]
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
 
@@ -46,7 +66,14 @@ def get_command(comm: Union[list, str]):
 
 @bot.on_message(filters.command('start') & filters.group)
 async def timistart(_,message):
-    await message.reply_text('Heyy, Watashi Wa Timi Is up')
+    Ttimi = requests.get("https://nekos.best/api/v2/neko")
+    data = Ttimi.json()
+    img = (data["results"][0]["url"])
+    return await message.reply_photo(
+      photo=img,
+      caption=TIMI_MSG,
+      reply_markup=InlineKeyboardMarkup(buttons)
+    )
 
 @bot.on_message(get_command('imi') & filters.group)
 async def timistart(_,message):
@@ -61,6 +88,7 @@ async def get_img(_,message):
     return await message.reply_photo(
       photo=img,
       caption=TIMI,
+      reply_markup=InlineKeyboardMarkup(Buttons)
     )
 
 @bot.on_message(filters.command('pout'))
