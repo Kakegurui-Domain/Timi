@@ -51,7 +51,12 @@ async def timistart(_,message):
 async def timistart(_,message):
     await message.reply_text('bashes him with a bat!')
     
-  
+@bot.on_message(filters.command('approve') & filters.group)
+async def timistart(_,message):
+    await request.approve()
+    await message.reply_text('The User Has Been Approved ')
+
+
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
     result = Timi.get_image("neko")
