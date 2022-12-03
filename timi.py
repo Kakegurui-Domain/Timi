@@ -9,6 +9,8 @@ from typing import Union
 from nekosbest import Client as timi, Result
 import asyncio 
 import requests 
+from strings import TIMI_NEKO
+
 
 Timi = timi()
 
@@ -46,7 +48,8 @@ async def timistart(_,message):
 
 @bot.on_message(get_command('imi') & filters.group)
 async def timistart(_,message):
-    await message.reply_text('Yes, Heyy! Timi is watching you *cuddles*')
+    Hm = random.choice(TIMI_NEKO)
+    await message.reply_text(Hm)
     
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
