@@ -59,7 +59,10 @@ async def timistart(_,message):
     
 async def pin(_, msg: Message):
     if not msg.reply_to_message:
+      await app.pin_chat_message(chat_id, message_id)
         return await msg.reply_text("Reply to a message to pin it.")
+
+
     r = msg.reply_to_message
     if msg.command[0] == "pin":
         await r.pin()
