@@ -22,8 +22,8 @@ API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
-chat = update.effective_chat
-user = update.effective_user
+chat_id = update.effective_chat
+user_id = update.effective_user
 message = update.effective_message
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
@@ -71,6 +71,11 @@ async def timistart(_,message):
 async def timistart(_,message): 
  await chat.unpin_all_messages()
  await message.reply_text('all message unpinned ') 
+
+  @bot.on_message(filters.command('promote') & filters.group)
+async def timistart(_,message):
+await app.promote_chat_member(chat_id, user_id)
+await message.reply_text('user is been successfully promoted ')
 
 
 @bot.on_message(filters.command('alive') & filters.group)
