@@ -23,7 +23,7 @@ BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-TIMI = """Timi is Up....!\n • Timi version: ```v1.0.0```"""
+TIMI = """Timi is Up....!\n • Timi version: `v1.0.0`\n • Timi Uptime: """
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
 
