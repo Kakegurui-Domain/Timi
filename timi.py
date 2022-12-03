@@ -57,10 +57,13 @@ async def timistart(_,message):
 async def timistart(_,message):
     await message.reply_text('hugs you!')
     
-@bot.on_message(filters.command('pin') & filters.group)
-async def timistart(_,message):
-   await timi.message.pin()
-   await message.reply_text('msg is pinned ')
+async def pin(_, msg: Message):
+    if not msg.reply_to_message:
+        return await msg.reply_text("Reply to a message to pin it.")
+    r = msg.reply_to_message
+    if msg.command[0] == "pin":
+        await r.pin()
+        return await msg.reply_text(f"pinned {r.link}!")
   
 @bot.on_message(filters.command('ban') & filters.group)
 async def timistart(_,message): 
