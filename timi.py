@@ -49,43 +49,6 @@ async def timistart(_,message):
 async def timistart(_,message):
     await message.reply_text('Yes, Heyy! Timi is watching you *cuddles*')
     
-@bot.on_message(filters.command('slap') & filters.group)
-async def timistart(_,message):
-    await message.reply_text('bashes him with a bat!')
-    
-@bot.on_message(filters.command('hug') & filters.group)
-async def timistart(_,message):
-    await message.reply_text('hugs you!')
-    
-async def pin(_, msg: Message):
-    if not msg.reply_to_message:
-        return await msg.reply_text("Reply to a message to pin it.")
-
-    r = msg.reply_to_message
-    if msg.command[0] == "pin":
-        await r.pin()
-        return await msg.reply_text(f"pinned {r.link}!")
-  
-@bot.on_message(filters.command('ban') & filters.group)
-async def timistart(_,message): 
-  await chat.ban_member(user_id)
-  await message.reply_text('succesfully banned ')
-  
-@bot.on_message(filters.command('unpinall') & filters.group)
-async def timistart(_,message): 
- await chat.unpin_all_messages()
- await message.reply_text('all message unpinned ') 
-
-  @bot.on_message(filters.command('promote') & filters.group)
-async def timistart(_,message):
-await app.promote_chat_member(chat_id, user_id)
-await message.reply_text('user is been successfully promoted ')
-
-@bot.on_message(filters.command('demote') & filters.group)
-async def timistart(message):
-await app.demote_chat_member(chat_id, user_id)
-await message.reply_text('user is been successfully demoted')
-
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
     result = Timi.get_image("neko")
