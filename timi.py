@@ -51,6 +51,10 @@ async def timistart(_,message):
 async def timistart(_,message):
     await message.reply_text('bashes him with a bat!')
     
+@bot.on_message(filters.command('hug') & filters.group)
+async def timistart(_,message):
+    await message.reply_text('hugs you!')
+    
 @bot.on_message(filters.command('approve') & filters.group)
 async def timistart(_,message):
     await request.approve()
