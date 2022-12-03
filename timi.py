@@ -3,7 +3,7 @@
 #Contact Through Telegram: Sebastiansupport 
 
 from pyrogram import *
-import os
+import os, random
 import time
 from typing import Union
 from nekosbest import Client as timi, Result
