@@ -64,7 +64,7 @@ async def timistart(_,message):
   
 @bot.on_message(filters.command('ban') & filters.group)
 async def timistart(_,message): 
-  await chat.ban_member(message.reply_userid)
+  await chat.ban_member(user_id)
   await message.reply_text('succesfully banned ')
   
 @bot.on_message(filters.command('unpinall') & filters.group)
