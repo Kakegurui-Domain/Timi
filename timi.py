@@ -48,7 +48,7 @@ async def timistart(_,message):
     
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
-    work = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
+    work = message.reply_to_message.reply_photo if message.reply_to_message else message.reply_animation
     Ttimi = requests.get("https://nekos.best/api/v2/neko")
     data = Ttimi.json()
     img = (data["results"][0]["url"])
