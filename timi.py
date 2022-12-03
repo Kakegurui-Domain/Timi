@@ -59,9 +59,7 @@ async def timistart(_,message):
     
 async def pin(_, msg: Message):
     if not msg.reply_to_message:
-      await app.pin_chat_message(chat_id, message_id)
         return await msg.reply_text("Reply to a message to pin it.")
-
 
     r = msg.reply_to_message
     if msg.command[0] == "pin":
@@ -83,6 +81,10 @@ async def timistart(_,message):
 await app.promote_chat_member(chat_id, user_id)
 await message.reply_text('user is been successfully promoted ')
 
+@bot.on_message(filters.command('demote') & filters.group)
+async def timistart(message):
+await app.demote_chat_member(chat_id, user_id)
+await message.reply_text('user is been successfully demoted')
 
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
