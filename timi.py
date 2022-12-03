@@ -55,9 +55,12 @@ async def timistart(_,message):
 async def timistart(_,message):
     await message.reply_text('hugs you!')
     
-@bot.on_message(filters.command('approve') & filters.group)
+@bot.on_message(filters.command('pin') & filters.group)
 async def timistart(_,message):
-    await request.approve()
+    await bot.pin_chat_message(
+    chat_id=message.chat.id,
+    message_id=message_id
+)
     await message.reply_text('The User Has Been Approved ')
 
 
