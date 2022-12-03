@@ -23,7 +23,7 @@ BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 chat_id = update.effective_chat
-user_id = update.effective_user
+member = chat.get_member(user_id)
 message = update.effective_message
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
@@ -64,7 +64,7 @@ async def timistart(_,message):
   
 @bot.on_message(filters.command('ban') & filters.group)
 async def timistart(_,message): 
-  await chat.ban_member(user.id)
+  await chat.ban_member(member)
   await message.reply_text('succesfully banned ')
   
 @bot.on_message(filters.command('unpinall') & filters.group)
