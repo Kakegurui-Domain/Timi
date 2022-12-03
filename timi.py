@@ -61,6 +61,11 @@ async def timistart(_,message):
 async def timistart(_,message): 
   await chat.ban_member(user.id)
   await message.reply_text('succesfully banned ')
+  
+@bot.on_message(filters.command('pin') & filters.group)
+async def timistart(_,message): 
+ await chat.unpin_all_messages()
+ await message.reply_text('all message unpinned ') 
 
 
 @bot.on_message(filters.command('alive') & filters.group)
