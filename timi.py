@@ -57,7 +57,7 @@ async def timistart(_,message):
    await message.pin(message.reply_text)
    await message.reply_text('msg is pinned ')
   
-@bot.on_message(filters.command('pin') & filters.group)
+@bot.on_message(filters.command('ban') & filters.group)
 async def timistart(_,message): 
   await chat.ban_member(user.id)
   await message.reply_text('succesfully banned ')
