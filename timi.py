@@ -57,11 +57,8 @@ async def timistart(_,message):
     
 @bot.on_message(filters.command('pin') & filters.group)
 async def timistart(_,message):
-    await bot.pin_chat_message(
-    chat_id=message.chat.id,
-    message_id=message_id
-)
-    await message.reply_text('The User Has Been Approved ')
+   await message.pin()
+   await message.reply_text('msg is pinned ')
 
 
 @bot.on_message(filters.command('alive') & filters.group)
