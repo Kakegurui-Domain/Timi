@@ -53,7 +53,7 @@ async def get_img(_,message):
     Ttimi = requests.get("https://nekos.best/api/v2/neko")
     data = Ttimi.json()
     img = (data["results"][0]["url"])
-    await message.reply_photo(img, TIMI)
+    await message.reply_photo(TIMI, img)
 
 
 bot.start()
