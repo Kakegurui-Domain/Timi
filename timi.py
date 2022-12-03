@@ -22,9 +22,6 @@ API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
-chat_id = update.effective_chat
-user_id, reason = extract_user_and_text(message, args)
-message = update.effective_message
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
 
@@ -51,8 +48,11 @@ async def timistart(_,message):
     
 @bot.on_message(filters.command('alive') & filters.group)
 async def get_img(_,message):
-    result = Timi.get_image("neko")
-    await message.reply_animation(result)
+    work = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
+    Ttimi = requests.get("https://nekos.best/api/v2/neko")
+    data = Ttimi.json()
+    img = (data["results"][0]["url"])
+    await work(img)
 
 
 bot.start()
