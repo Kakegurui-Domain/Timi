@@ -290,10 +290,6 @@ async def dance(_, message):
     img = result['url']
     await message.reply_animation(img)
     
-@bot.on_message(filters.command('kick'))
-async def kick(_, message):
- await chat.restrict_member(user_id, ChatPermissions())
- await message.reply_text("user is being succesfully kicked")
 
 @bot.on_message(filters.command('cringe'))
 async def cringe(_, message):
