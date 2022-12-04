@@ -289,6 +289,11 @@ async def dance(_, message):
     result = requests.get(url).json()
     img = result['url']
     await message.reply_animation(img)
+    
+@bot.on_message(filters.command('cringe'))
+async def kick(_, message)
+ msg = await client.kick_participant(chat, user)
+ await msg.delete()
 
 @bot.on_message(filters.command('cringe'))
 async def cringe(_, message):
