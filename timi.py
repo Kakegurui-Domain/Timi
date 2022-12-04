@@ -10,7 +10,7 @@ from typing import Union
 from nekosbest import Client as timi, Result
 import asyncio 
 import requests 
-from strings import TIMI_NEKO, TIMI_HELPS
+from strings import TIMI_NEKO, TIMI_HELP
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 
 Timi = timi()
@@ -65,7 +65,7 @@ def get_command(comm: Union[list, str]):
       res.extend([com, f"{com}@TimiCuteBot"])
   return filters.command(res, prefixes=["t", "T"])
 
-@bot.on_message(filters.command('start') & filters.group)
+@bot.on_message(filters.command('start'))
 async def timistart(_,message):
     Ttimi = requests.get("https://nekos.best/api/v2/neko")
     data = Ttimi.json()
