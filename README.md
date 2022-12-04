@@ -26,3 +26,5 @@ And ask dev's For help
 • [Lucifer](GitHub.com/Luciferkun)
 
 • [Suna](GitHub.com/SunaRintaro2)
+
+• [SINON](GitHub.com/SINON3)
