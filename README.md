@@ -1,5 +1,5 @@
 # Timi(Maintained)
-Timi is a fun Neko Bot!
+Timi is a fun Neko Bot[!](https://telegra.ph/file/e9cce8b66270a4228fba6.jpg)
 Using Nekos.best api
 
 
