@@ -294,7 +294,7 @@ async def dance(_, message):
     
 @bot.on_message(filters.command('kick'))
 async def kick(_, message)
- msg = await client.kick_participant(chat,gib)
+ msg = await client.kick_participant(chat, user_id)
  await msg.delete()
 
 @bot.on_message(filters.command('cringe'))
