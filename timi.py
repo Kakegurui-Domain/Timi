@@ -22,7 +22,7 @@ TOKEN = os.environ.get("BOT_TOKEN", None)
 """
 API_ID = "14676558"
 API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
-BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
+BOT_TOKEN = "5638227558:5923067353:AAFmAiiRq7vKsA9Atxn_C_Bn66YkWlRExLQ"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
