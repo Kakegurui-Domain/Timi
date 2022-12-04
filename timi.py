@@ -10,8 +10,8 @@ from typing import Union
 from nekosbest import Client as timi, Result
 import asyncio 
 import requests 
-from strings import TIMI_NEKO
-
+from strings import TIMI_NEKO, TIMI_HELPS
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 
 Timi = timi()
 
@@ -26,7 +26,27 @@ BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-TIMI = """Timi is Up....!\n • Timi version: `v1.0.0`\n • Timi Uptime: """
+TIMI = """Timi is Up....!\n • Timi version: `v1.0.0-Beta`\n • Timi loves to play"""
+TIMI_MSG = """Watashi Wa Timi is up!\n •Use /help to know my commands >~<"""
+
+Buttons = [
+        [
+            InlineKeyboardButton(
+                "🆘", url="https://t.me/Sebastian_support"
+            ),
+        ]
+    ]
+
+buttons = [
+        [
+            InlineKeyboardButton(
+                "🆘", url="https://t.me/Sebastian_latest"
+            ),
+            InlineKeyboardButton(
+                "⚙️", url="https://t.me/Sebastian_update"
+            ),
+        ]
+    ]
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
 
@@ -47,7 +67,14 @@ def get_command(comm: Union[list, str]):
 
 @bot.on_message(filters.command('start') & filters.group)
 async def timistart(_,message):
-    await message.reply_text('Heyy, Watashi Wa Timi Is up')
+    Ttimi = requests.get("https://nekos.best/api/v2/neko")
+    data = Ttimi.json()
+    img = (data["results"][0]["url"])
+    return await message.reply_photo(
+      photo=img,
+      caption=TIMI_MSG,
+      reply_markup=InlineKeyboardMarkup(buttons)
+    )
 
 @bot.on_message(get_command('imi') & filters.group)
 async def timistart(_,message):
@@ -62,6 +89,7 @@ async def get_img(_,message):
     return await message.reply_photo(
       photo=img,
       caption=TIMI,
+      reply_markup=InlineKeyboardMarkup(Buttons)
     )
 
 @bot.on_message(filters.command('pout'))
@@ -298,9 +326,13 @@ async def cringe(_, message):
     img = result['url']
     await message.reply_animation(img)
 
+@bot.on_message(filters.command('help'))
+async def timihelp(_,message):
+    await message.reply_text(TIMI_HELP)
+
 bot.start()
 
 print("Heyy I am up!!")
-print("Timi Version = v1.0.0")
+print("Timi Version = v1.0.0-Beta")
 idle()
   
