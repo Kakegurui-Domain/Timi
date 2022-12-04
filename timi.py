@@ -26,8 +26,6 @@ BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-gib = print(async await client.get_peer_id()) 
-
 TIMI = """Timi is Up....!\n • Timi version: `v1.0.0`\n • Timi Uptime: """
 
 print('Bot is Starting. Created By https://t.me/Sebastiansupport Devs. Timi is Running ')
@@ -295,7 +293,7 @@ async def dance(_, message):
 @bot.on_message(filters.command('kick'))
 async def kick(_, message)
  await chat.restrict_member(user_id, ChatPermissions())
- await msg.delete()
+ await message.reply_text("user is being succesfully kicked")
 
 @bot.on_message(filters.command('cringe'))
 async def cringe(_, message):
