@@ -25,13 +25,13 @@ BOT_TOKEN = "5638227558:AAFoVUIY23zXUfGpVNzPiHcaA3k_J7mIGWs"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-TIMI = """Timi is Up....!\n • Timi version: `v1.0.0`\n • Timi Uptime: """
-TIMI_MSG = """Watashi Wa Timi is up!"""
+TIMI = """Timi is Up....!\n • Timi version: `v1.0.0-Beta`\n • Timi loves to play"""
+TIMI_MSG = """Watashi Wa Timi is up!\n •Use /help to know my commands >~<"""
 
 Buttons = [
         [
             InlineKeyboardButton(
-                "🆘", url="https://t.me/Sebastiansupport"
+                "🆘", url="https://t.me/Sebastian_support"
             ),
         ]
     ]
@@ -39,7 +39,7 @@ Buttons = [
 buttons = [
         [
             InlineKeyboardButton(
-                "🆘", url="https://t.me/Sebastian_support"
+                "🆘", url="https://t.me/Sebastian_latest"
             ),
             InlineKeyboardButton(
                 "⚙️", url="https://t.me/Sebastian_update"
