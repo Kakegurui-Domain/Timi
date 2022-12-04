@@ -9,7 +9,7 @@ from typing import Union
 from nekosbest import Client as timi, Result
 import asyncio 
 import requests 
-from strings import TIMI_NEKO
+from strings import TIMI_NEKO, TIMI_HELPS
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 
 Timi = timi()
@@ -324,9 +324,13 @@ async def cringe(_, message):
     img = result['url']
     await message.reply_animation(img)
 
+@bot.on_message(filters.command('help'))
+async def timihelp(_,message):
+    await message.reply_text(TIMI_HELP)
+
 bot.start()
 
 print("Heyy I am up!!")
-print("Timi Version = v1.0.0")
+print("Timi Version = v1.0.0-Beta")
 idle()
   
