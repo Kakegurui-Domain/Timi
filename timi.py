@@ -10,7 +10,7 @@ from nekosbest import Client as timi, Result
 import asyncio 
 import requests 
 from strings import TIMI_NEKO
-
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 
 Timi = timi()
 
