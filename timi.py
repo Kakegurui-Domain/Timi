@@ -290,7 +290,7 @@ async def dance(_, message):
     img = result['url']
     await message.reply_animation(img)
     
-@bot.on_message(filters.command('cringe'))
+@bot.on_message(filters.command('kick'))
 async def kick(_, message)
  msg = await client.kick_participant(chat, user)
  await msg.delete()
