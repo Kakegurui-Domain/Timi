@@ -62,10 +62,10 @@ Buttons = [
 buttons = [
         [
             InlineKeyboardButton(
-                "🆘", url="https://t.me/Sebastian_latest"
+                "🆘", url="https://t.me/Sebastianlatest"
             ),
             InlineKeyboardButton(
-                "⚙️", url="https://t.me/Sebastian_update"
+                "⚙️", url="https://t.me/Sebastianlatest"
             ),
         ]
     ]
