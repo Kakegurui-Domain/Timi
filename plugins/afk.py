@@ -1,4 +1,4 @@
-# Ded module
+# Dead module
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 # Copyright (C) 2022-2023 by Kakegurui-Domain@Github, < https://github.com/Kakegurui-Domain >.
 
