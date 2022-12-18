@@ -33,7 +33,7 @@ from nekosbest import Client as timi, Result
 import asyncio 
 import requests 
 from strings import TIMI_NEKO, TIMI_HELP
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 Timi = timi()
 
@@ -48,7 +48,7 @@ BOT_TOKEN = "5923067353:AAFmAiiRq7vKsA9Atxn_C_Bn66YkWlRExLQ"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-TIMI = """Timi is Up....!\n • Timi version: `v1.0.0-Beta`\n • Timi loves to play"""
+TIMI = """Timi is Up....!\n • Timi version: `v1.0.1`\n • Timi loves to play"""
 TIMI_MSG = """Watashi Wa Timi is up!\n •Use /help to know my commands >~<"""
 
 Buttons = [
@@ -352,9 +352,16 @@ async def cringe(_, message):
 async def timihelp(_,message):
     await message.reply_text(TIMI_HELP)
 
+TIMI_GIF = "https://telegra.ph/file/6d8fedcb0fd342d6249e8.mp4"
+
+@bot.on_message(filters.new_chat_members)
+async def welcome(_, message: Message):
+        await message.reply_animation(TIMI_GIF,caption="Meowyy! Heyy >~< {}\nWelcome to **{}**!".format(m.from_user.mention,m.chat.title))
+        
+
 bot.start()
 
 print("Heyy I am up!!")
-print("Timi Version = v1.0.0-Beta")
+print("Timi Version = v1.0.1")
 idle()
   
