@@ -46,7 +46,7 @@ API_ID = "14676558"
 API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 BOT_TOKEN = "5923067353:AAFmAiiRq7vKsA9Atxn_C_Bn66YkWlRExLQ"
 
-bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="{}/plugins".format(__name__)))
 
 TIMI = """Timi is Up....!\n • Timi version: `v1.0.1`\n • Timi loves to play"""
 TIMI_MSG = """Watashi Wa Timi is up!\n •Use /help to know my commands >~<"""
