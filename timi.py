@@ -356,7 +356,7 @@ TIMI_GIF = "https://telegra.ph/file/6d8fedcb0fd342d6249e8.mp4"
 
 @bot.on_message(filters.new_chat_members)
 async def welcome(_, message: Message):
-        await message.reply_animation(TIMI_GIF,caption="Meowyy! Heyy >~< {}\nWelcome to **{}**!".format(m.from_user.mention,m.chat.title))
+        await message.reply_animation(TIMI_GIF,caption="Meowyy! Heyy >~< {}\nWelcome to **{}**!".format(message.from_user.mention,message.chat.title))
         
 
 bot.start()
