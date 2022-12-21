@@ -15,7 +15,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from timi import bot as app
-from timi.Database import add_afk, is_afk, remove_afk
+from plugins.Database import add_afk, is_afk, remove_afk
 
 from typing import Union
 from datetime import datetime, timedelta
