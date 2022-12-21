@@ -55,7 +55,7 @@ async def put_cleanmode(chat_id, message_id):
     }
     cleanmode[chat_id].append(put)
 
-@app.on_message(filters.command(["afk", f"afk@{botusername}"]) & ~filters.edited)
+@app.on_message(filters.command(["afk", f"afk@TimiCuteBot"]) & ~filters.edited)
 async def active_afk(_, message: Message):
     if message.sender_chat:
         return
