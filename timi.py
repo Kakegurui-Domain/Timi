@@ -49,7 +49,7 @@ API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 BOT_TOKEN = "5923067353:AAFmAiiRq7vKsA9Atxn_C_Bn66YkWlRExLQ"
 MONGO_DB = "mongodb+srv://erina:erina@cluster0.gjwlr.mongodb.net/cluster0?retryWrites=true&w=majority"
 
-bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="{}/plugins".format(__name__)))
+bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="plugins".format(__name__)))
 
 async_mongo_client = async_mongo(MONGO_DB)
 db = async_mongo_client.erina
