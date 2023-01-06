@@ -46,7 +46,7 @@ MONGO_DB = os.environ.get("MONGO_DB", None)
 """
 API_ID = "14676558"
 API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
-BOT_TOKEN = "5360184239:AAH_DMhkHM4E6Gdw33uuggEMMFy5OhIqOVM"
+BOT_TOKEN = "5858449362:AAGUFlz5ld5skykPBN63mmgUS7HimG5uuiM"
 MONGO_DB = "mongodb+srv://erina:erina@cluster0.gjwlr.mongodb.net/cluster0?retryWrites=true&w=majority"
 
 bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="plugins".format(__name__)))
