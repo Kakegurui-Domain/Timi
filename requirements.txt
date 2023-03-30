@@ -5,4 +5,4 @@ pyrogram
 requests
 tgcrypto
 nekosbest
-telethon
+chatterbot
