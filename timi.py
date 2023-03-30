@@ -21,7 +21,7 @@
 #SOFTWARE.
 
 #Credits To: Github.com/Kakeguri-Domain
-#Devs: Github.com/Ryu120 , Github.com/Theblacklinen, GitHub.com/SOME-1HING
+#Devs: Github.com/Ryu120 , Github.com/Theblacklinen
 #Contact Through Telegram: https://t.me/Sebastiansupport 
 
 from pyrogram import *
@@ -42,13 +42,13 @@ Timi = timi()
 API_ID = os.environ.get("API_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 """
-TOKEN = os.environ.get("BOT_TOKEN", None)
+TOKEN = os.environ.get("TOKEN", None)
 MONGO_DB = os.environ.get("MONGO_DB", None)
 
 API_ID = "14676558"
 API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 
-bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="plugins".format(__name__)))
+bot = Client("Timi", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN, plugins=dict(root="plugins".format(__name__)))
 
 async_mongo_client = async_mongo(MONGO_DB)
 db = async_mongo_client.erina
