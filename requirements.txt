@@ -6,3 +6,4 @@ requests
 tgcrypto
 nekosbest
 chatterbot==1.0.0
+chatterbot-corpus
