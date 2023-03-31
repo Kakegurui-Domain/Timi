@@ -5,4 +5,4 @@ pyrogram
 requests
 tgcrypto
 nekosbest
-chatterbot
+chatterbot==1.0.0
