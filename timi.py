@@ -25,7 +25,6 @@
 #Contact Through Telegram: https://t.me/Sebastiansupport 
 
 from pyrogram import *
-from telethon import *
 import os, random
 import time
 from typing import Union
