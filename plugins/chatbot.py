@@ -1,5 +1,5 @@
 
-from Timi import bot
+from timi import bot
 from pyrogram import*
 
 from transformers import pipeline
