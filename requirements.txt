@@ -5,5 +5,3 @@ pyrogram
 requests
 tgcrypto
 nekosbest
-transformers
-PyTorch
