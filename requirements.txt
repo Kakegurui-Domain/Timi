@@ -5,3 +5,4 @@ pyrogram
 requests
 tgcrypto
 nekosbest
+pygame
