@@ -6,4 +6,4 @@ requests
 tgcrypto
 nekosbest
 transformers
-tensorflow
+PyTorch
