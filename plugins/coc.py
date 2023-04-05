@@ -5,7 +5,7 @@ from pyrogram import *
 from timi import bot
 
 
-@bot.on_message(filters.command("rps"))
+@bot.on_message(filters.command("rps") & ~filters.private)
 def play_rps(_, msg):
     user_choice = msg.text.split()[-1].lower()
     options = ['rock', 'paper', 'scissors']
