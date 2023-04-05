@@ -22,7 +22,7 @@ def play_rps(_, msg):
     else:
         result = "Invalid choice! Please choose rock, paper, or scissors."
     
-    msg.send_message(result)
+    bot.reply_text(result)
 
 
 
